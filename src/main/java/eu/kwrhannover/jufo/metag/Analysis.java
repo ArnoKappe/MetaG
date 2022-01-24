@@ -1,5 +1,7 @@
 package eu.kwrhannover.jufo.metag;
 
+import cern.colt.list.DoubleArrayList;
+import cern.colt.list.LongArrayList;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,7 +25,7 @@ public final class Analysis {
         return new Result(sourceFile, diagnosticFinding, analysis);
     }
 
-    public Result analyseDistances(ArrayList<Double> scaledBars) {
+    public Result analyseDistances(DoubleArrayList scaledBars) {
         double analyse = 0;
         for (int i = 0; i < (scaledBars.size() - 1); ++i) {
             analyse += ((scaledBars.get(i)) - (scaledBars.get(i + 1)));
@@ -106,22 +108,19 @@ public final class Analysis {
         }
     }
 
-    public static ArrayList<Double> scaleBars(final List<Long> bars, final long distanceCount) {
-        final List<Double> scaledBars =
-                fill(new ArrayList<>(barCount), barCount, 0.0);
+    public static DoubleArrayList scaleBars(final LongArrayList bars, final long distanceCount) {
+        final double[] scaledBars = new double[barCount];
         final double p100 = 100.0 / distanceCount;
         double d;
         for (int i = 0; i < bars.size(); ++i) {
             d = bars.get(i) * p100;
-            scaledBars.set(i, d);
+            scaledBars[i] = d;
         }
-        return new ArrayList<>(scaledBars);
+        return new DoubleArrayList(scaledBars);
     }
 
-    public static List<Long> groupDistances(List<Long> distanceIntervals) {
-        final List<Long> bars =
-                fill(new ArrayList<>(barCount), barCount, 0L);
-
+    public static LongArrayList groupDistances(LongArrayList distanceIntervals) {
+        final long[] bars = new long[barCount];
         final int barsize = (int) Math.round((double) distanceIntervals.size() / barCount);
 
         for (int intervalIndex = 0, barIndex = 0, i = 0;
@@ -132,7 +131,7 @@ public final class Analysis {
                 break;
             }
 
-            bars.set(barIndex, (bars.get(barIndex) + distanceIntervals.get(intervalIndex)));
+            bars[barIndex] += distanceIntervals.get(intervalIndex);
 
             ++i;
             if (i == barsize) {
@@ -140,7 +139,7 @@ public final class Analysis {
                 ++barIndex;
             }
         }
-        return new ArrayList<>(bars);
+        return new LongArrayList(bars);
     }
 
     private static <T> List<T> fill(final List<T> list, final int size, final T element) {
@@ -149,10 +148,9 @@ public final class Analysis {
         return list;
     }
 
-    public static List<Long> calculateDistanceIntervals(final ArrayList<Double> positions) {
+    public static LongArrayList calculateDistanceIntervals(final DoubleArrayList positions) {
         final int distanceIntervalCount = barCount * 10;
-        final List<Long> distanceIntervals =
-                fill(new ArrayList<>(distanceIntervalCount), distanceIntervalCount, 0L);
+        final long[] distanceIntervals = new long[distanceIntervalCount];
 
         for (int i = 0; i != positions.size(); ++i) {
             for (int j = i + 1; j != positions.size(); ++j) {
@@ -174,10 +172,10 @@ public final class Analysis {
                     intervalIndex = distanceIntervalIndex(d, distanceIntervalCount);
                 }
 
-                distanceIntervals.set(intervalIndex, (distanceIntervals.get(intervalIndex) + 1));
+                ++distanceIntervals[intervalIndex];
             }
         }
-        return new ArrayList<>(distanceIntervals);
+        return new LongArrayList(distanceIntervals);
     }
 
     private static int distanceIntervalIndex(final double distance, int distanceIntervalCount) {

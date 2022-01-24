@@ -1,5 +1,7 @@
 package eu.kwrhannover.jufo.metag;
 
+import cern.colt.list.DoubleArrayList;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -25,11 +27,10 @@ public class CreateSVG {
         } else {
             fileEnding += "_scaled" + scale + "x.svg";
         }
-        final Path targetFile = path.getParent().resolve(cutFileExtension(path.getFileName()) + fileEnding);
-        return targetFile;
+        return path.getParent().resolve(cutFileExtension(path.getFileName()) + fileEnding);
     }
 
-    public static void writeSVG(final ArrayList<Double> scaledBars, final Path path, final Path targetFile, final Result result) throws IOException {
+    public static void writeSVG(final DoubleArrayList scaledBars, final Path path, final Path targetFile, final Result result) throws IOException {
         for (int i = 0; i != 6; ++i) {
             subtitlesLeft.set(i, String.valueOf(i * 20 / scale));
         }

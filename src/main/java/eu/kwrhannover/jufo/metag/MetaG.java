@@ -1,5 +1,7 @@
 package eu.kwrhannover.jufo.metag;
 
+import cern.colt.list.DoubleArrayList;
+import cern.colt.list.LongArrayList;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -56,14 +58,14 @@ public class MetaG {
             boolean check = path.toString().endsWith(".csv");
             if (check) {
                 try {
-                    final ArrayList<Double> positions = parseCSV(path);
+                    final DoubleArrayList positions = parseCSV(path);
 
                     final long distanceCount = ((long) positions.size() * (positions.size() - 1)) / 2;
 
-                    final List<Long> distanceIntervals = calculateDistanceIntervals(positions);
-                    final List<Long> bars = groupDistances(distanceIntervals);
+                    final LongArrayList distanceIntervals = calculateDistanceIntervals(positions);
+                    final LongArrayList bars = groupDistances(distanceIntervals);
 
-                    ArrayList<Double> scaledBars = scaleBars(bars, distanceCount);
+                    DoubleArrayList scaledBars = scaleBars(bars, distanceCount);
 
                     Result result = analysis.analyseDistances(scaledBars);
                     results.add(result);

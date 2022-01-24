@@ -1,5 +1,7 @@
 package eu.kwrhannover.jufo.metag;
 
+import cern.colt.list.DoubleArrayList;
+
 import java.io.FileNotFoundException;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -12,9 +14,9 @@ public class ParseCSV {
     //TODO Detection of decimal point
     //TODO Detection of position table (other csv files can be ignored)
 
-    public static ArrayList<Double> parseCSV(final Path path) throws FileNotFoundException {
+    public static DoubleArrayList parseCSV(final Path path) throws FileNotFoundException {
         try (Scanner scanner = new Scanner(path.toFile())) {
-            final ArrayList<Double> positions = new ArrayList<>();
+            final DoubleArrayList positions = new DoubleArrayList();
             scanner.useLocale(Locale.ENGLISH); //depends on decimal point: en "." ger ","
             int positionCount = 0;
             int line = 1;
