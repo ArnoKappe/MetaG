@@ -13,7 +13,7 @@ Prebuilt archives with GUI (graphical user interface) are available:
 
 ### Alternative
 Alternatively you could [build](BUILD.md) the app with the source code.
-- Release: [`MetaG-2022.1.0.zip`](https://github.com/dluxe0/MetaG/archive/refs/tags/V2022.1.0.zip)
+- Release: [`MetaG-2022.1.0.zip`](https://github.com/dluxe0/MetaG/archive/refs/tags/2022.1.0.zip)
 - Current: [`MetaG-main.zip`](https://github.com/dluxe0/MetaG/archive/refs/heads/main.zip)
 
 ## Run the app
