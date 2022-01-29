@@ -2,11 +2,11 @@ package eu.kwrhannover.jufo.metag;
 
 import cern.colt.list.DoubleArrayList;
 import cern.colt.list.LongArrayList;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 
 import static eu.kwrhannover.jufo.metag.MetaG.barCount;
@@ -30,8 +30,6 @@ public final class Analysis {
         for (int i = 0; i < (scaledBars.size() - 1); ++i) {
             analyse += ((scaledBars.get(i)) - (scaledBars.get(i + 1)));
         }
-        // TODO add more cases
-        // TODO erhöhe positiv Grenzwert
         // Die Analyse wird für folgende Säulenanzahlen / res unterstützt: 5, 10, 15, 20, 30, 40, 50
         // Dies liegt daran, dass die Grenzwerte der Analysewerte per Hand ermittelt werden und damit auch nur vorhergesehene Fälle analysiert werden können.
         // Man könnte an dieser Stelle einen Kalibrierungsalgorithmus einbringen, der immer Grenzwerte für fremde Anzahlen an Säulen festlegt.
