@@ -11,8 +11,8 @@ Prebuilt archives with GUI (graphical user interface) are available:
 - With Java (recommended): [`MetaG-2022.1.0-linux.zip`](https://github.com/dluxe0/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-linux.zip)
 - Without Java: [`MetaG-2022.1.0-nojava-linux.zip`](https://github.com/dluxe0/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-nojava-linux.zip)
 
-### Alternative
-Alternatively you could [build](BUILD.md) the app with the source code.
+### Alternatives
+Alternatively you can [build](BUILD.md) the app with the source code.
 - Release: [`MetaG-2022.1.0.zip`](https://github.com/dluxe0/MetaG/archive/refs/tags/2022.1.0.zip)
 - Current: [`MetaG-main.zip`](https://github.com/dluxe0/MetaG/archive/refs/heads/main.zip)
 
@@ -29,15 +29,15 @@ Alternatively you could [build](BUILD.md) the app with the source code.
 2. Run `bin/MetaG`
 
 ## Settings
-In order to achieve the best possible results, you can make settings for how MetaG works. In the regular version with GUI, the layout elements can be used for this, alternatively and in the version without GUI, the `MetaG.properties` file is intended for this.
-|    Setting                                  |   Specification                                          |   Value
-| ------------------------------------------- |----------------------------------------------------------|---------------------------------------------
-| DIRECTORY                                   | Path for databases                                       |use `\\` or `/` for folders
-| BROWSE_SUBFOLDERS                           | Whether subfolders should be searched for files          |`true` or `false`
-| BAR_COUNT                                   | The number of columns in the diagram                     |`10` - `50` others are experimental
-| MAX_POSITIONS                               | The upper limit of reads to process                      |at least `1000`, recommended `10000`
-| GRAPH_SCALE                                 | The scaling of the diagram                               |`1`,`2`,`5`,`10`,`20` others are experimental
-| SVG_OUTPUT                                  | Whether to create SVGs                                   |`true` or `false`
+In order to achieve the best possible results, you can change settings for how MetaG functions. In the regular version with GUI, the layout elements can be used for this. `MetaG.properties` is a file, intended to make the same changes. Available in both versions, with or without GUI.
+|    Setting                                  |   Specification                                       |   Value
+| ------------------------------------------- |-------------------------------------------------------|----------------------------------------------------
+| DIRECTORY                                   | Path for databases                                    |use `\\` or `/` for folders
+| BROWSE_SUBFOLDERS                           | Whether or not subfolders should be searched for files|`true` or `false`
+| BAR_COUNT                                   | Quantity of columns in the diagram                    |`10` - `50`
+| MAX_POSITIONS                               | Upper limit of reads to process                       |at least `1000`, recommended `10000`
+| GRAPH_SCALE                                 | Scale of the diagram                                  |`1`,`2`,`5`,`10`,`20` other scaling is experimental
+| SVG_OUTPUT                                  | Whether or not to create SVGs                         |`true` or `false`
 > Note: `MetaG.properties` is created automatically on first run.
 
 `MetaG.properties` could look like the following
