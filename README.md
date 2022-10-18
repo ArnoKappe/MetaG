@@ -8,19 +8,19 @@ Prebuilt archives with GUI (graphical user interface) are available:
 
 ### Windows
 
-- With Java (recommended): [`MetaG-2022.1.0-win.zip`](https://github.com/dluxe0/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-win.zip)
-- Without Java: [`MetaG-2022.1.0-nojava-win.zip`](https://github.com/dluxe0/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-nojava-win.zip)
+- With Java (recommended): [`MetaG-2022.1.0-win.zip`](https://github.com/ArnoKappe/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-win.zip)
+- Without Java: [`MetaG-2022.1.0-nojava-win.zip`](https://github.com/ArnoKappe/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-nojava-win.zip)
 
 ### Linux
 
-- With Java (recommended): [`MetaG-2022.1.0-linux.zip`](https://github.com/dluxe0/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-linux.zip)
-- Without Java: [`MetaG-2022.1.0-nojava-linux.zip`](https://github.com/dluxe0/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-nojava-linux.zip)
+- With Java (recommended): [`MetaG-2022.1.0-linux.zip`](https://github.com/ArnoKappe/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-linux.zip)
+- Without Java: [`MetaG-2022.1.0-nojava-linux.zip`](https://github.com/ArnoKappe/MetaG/releases/download/2022.1.0/MetaG-2022.1.0-nojava-linux.zip)
 
 ### Alternatives
 
 Alternatively you can [build](BUILD.md) the app with the source code.
-- Release: [`MetaG-2022.1.0.zip`](https://github.com/dluxe0/MetaG/archive/refs/tags/2022.1.0.zip)
-- Current: [`MetaG-main.zip`](https://github.com/dluxe0/MetaG/archive/refs/heads/main.zip)
+- Release: [`MetaG-2022.1.0.zip`](https://github.com/ArnoKappe/MetaG/archive/refs/tags/2022.1.0.zip)
+- Current: [`MetaG-main.zip`](https://github.com/ArnoKappe/MetaG/archive/refs/heads/main.zip)
 
 ## Run the app
 
@@ -66,7 +66,7 @@ In order to achieve the best possible results, you can change settings for how M
 
 ## Input
 
-Read data sets from `.csv` files with any quantity of position values between 0 and 1 are used as input. The values are arranged randomly and there can be several million. To generate artificial databases, we recommend using [**MetaG-MetagenomicDatabaseGenerator**](https://github.com/dluxe0/MetaG-MetagenomicDatabaseGenerator).
+Read data sets from `.csv` files with any quantity of position values between 0 and 1 are used as input. The values are arranged randomly and there can be several million. To generate artificial databases, we recommend using [**MetaG-MetagenomicDatabaseGenerator**](https://github.com/ArnoKappe/MetaG-MetagenomicDatabaseGenerator).
 
 The input files could look like the following:
 

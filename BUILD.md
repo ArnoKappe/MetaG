@@ -8,8 +8,8 @@
 ## Build MetaG with GUI
 
 1. Download a version:
-    - Release: [`MetaG-2022.1.0.zip`](https://github.com/dluxe0/MetaG/archive/refs/tags/2022.1.0.zip)
-    - Current: [`MetaG-main.zip`](https://github.com/dluxe0/MetaG/archive/refs/heads/main.zip)
+    - Release: [`MetaG-2022.1.0.zip`](https://github.com/ArnoKappe/MetaG/archive/refs/tags/2022.1.0.zip)
+    - Current: [`MetaG-main.zip`](https://github.com/ArnoKappe/MetaG/archive/refs/heads/main.zip)
 2. Unzip the cloned code
 3. Open in IntellJ
    > check Project SDK is set to 17+ (Project Structure -> Project -> SDK)
@@ -19,8 +19,8 @@
 ## Build MetaG without GUI
 
 1. Download a version:
-    - Release: [`MetaG-2022.1.0.zip`](https://github.com/dluxe0/MetaG/archive/refs/tags/2022.1.0.zip)
-    - Current: [`MetaG-main.zip`](https://github.com/dluxe0/MetaG/archive/refs/heads/main.zip)
+    - Release: [`MetaG-2022.1.0.zip`](https://github.com/ArnoKappe/MetaG/archive/refs/tags/2022.1.0.zip)
+    - Current: [`MetaG-main.zip`](https://github.com/ArnoKappe/MetaG/archive/refs/heads/main.zip)
 2. Unzip the cloned code
 3. Open in IntellJ
    > check Project SDK is set to 17+ (Project Structure -> Project -> SDK)
